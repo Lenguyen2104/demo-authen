@@ -1,10 +1,7 @@
 package com.demo.authen.controller;
 
 import org.springframework.http.HttpHeaders;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class TestController {
@@ -14,4 +11,8 @@ public class TestController {
 		return headers.toString();
 	}
 
+	@GetMapping("/name")
+	public String youname() {
+		return "my name nguyen";
+	}
 }
